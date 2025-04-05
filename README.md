@@ -49,7 +49,7 @@ Feel free to contribute if you're in the same field or want to add improvements.
 ## 📬 Connect with Me
 
 - LinkedIn: *https://www.linkedin.com/in/nikash-lamsal613*
-- Email: *Optional*
+- Email: *lamsalnikash312@gmail.com*
 
 ---
 
