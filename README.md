@@ -32,14 +32,14 @@ Each subject folder may contain:
 - Diagrams or scanned pages
 
 ---
-## 📂 Extra Materials (Google Drive)
 
-📎 [Click here to access extra resources like books, slides, and reference files]([https://drive.google.com/your-drive-link-here](https://drive.google.com/drive/folders/1AGfneKEaUYrCjXPFHb6YBxQvOzGqzcQ-))
+## 📂 Extra Materials
 
-> Note: This folder will be updated from time to time with new resources.
+📎 **[Click here to access extra resources like books, slides, and reference files on Google Drive](https://drive.google.com/drive/folders/1AGfneKEaUYrCjXPFHb6YBxQvOzGqzcQ-)**
+
+> This folder includes bonus study materials not in the main repo. Updated regularly!
 
 ---
-
 ## 📅 Upcoming Updates:
 
 - 🔜 Semester 4 and beyond...
