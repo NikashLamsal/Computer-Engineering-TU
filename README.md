@@ -32,6 +32,13 @@ Each subject folder may contain:
 - Diagrams or scanned pages
 
 ---
+## 📂 Extra Materials (Google Drive)
+
+📎 [Click here to access extra resources like books, slides, and reference files]([https://drive.google.com/your-drive-link-here](https://drive.google.com/drive/folders/1AGfneKEaUYrCjXPFHb6YBxQvOzGqzcQ-))
+
+> Note: This folder will be updated from time to time with new resources.
+
+---
 
 ## 📅 Upcoming Updates:
 
