@@ -8,6 +8,8 @@ Welcome to my Computer Engineering Notes repository! This repo contains well-str
 - ✅ **Semester 1**
 - ✅ **Semester 2**
 - ✅ **Semester 3**
+- ✅ **Semester 4** currently running 
+
 
 > Notes will be updated regularly as I continue my studies.
 
