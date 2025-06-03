@@ -126,14 +126,14 @@ title('Continuous Sine / Nikash / 39');
 grid on;
 
 subplot(2,2,3);
-stem(t, y, 'g');
+stem(t, y, 'b');
 xlabel('Time');
 ylabel('Amplitude');
 title('Discrete Cosine / Nikash / 39');
 grid on;
 
 subplot(2,2,4);
-plot(t, y, 'm');
+plot(t, y, 'r');
 xlabel('Time');
 ylabel('Amplitude');
 title('Continuous Cosine / Nikash / 39');
