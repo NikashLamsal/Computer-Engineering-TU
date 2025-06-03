@@ -1,3 +1,4 @@
+# Matlab Code & Output 
 # Continuous sine wave
 
 ```matlab
