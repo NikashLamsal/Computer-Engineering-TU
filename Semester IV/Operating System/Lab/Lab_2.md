@@ -1,6 +1,6 @@
-# 🐧 Linux File Permissions & File Operations
+#  Lab 2 :🐧 Linux File Permissions & File Operations
 
-## 🔐 Types of Permissions and Modes
+## Types of Permissions and Modes
 
 Linux files/directories have 3 types of permissions:
 
@@ -35,7 +35,7 @@ Example: `chmod 755 file` = rwx (7) for user, r-x (5) for group, r-x (5) for oth
 
 ---
 
-## 📁 1. Create 4 Directories, Each with 4 Text Files
+## 1. Create 4 Directories, Each with 4 Text Files
 
 ```bash
 mkdir dir1 dir2 dir3 dir4
@@ -69,7 +69,7 @@ mv dir1 dir_one
 
 ---
 
-## 📦 4. Move second file of dir3 to dir2
+##  4. Move second file of dir3 to dir2
 
 ```bash
 mv dir3/text2.txt dir2/
@@ -79,7 +79,7 @@ mv dir3/text2.txt dir2/
 
 ---
 
-## 📄 5. Copy all 4 files of dir_one to dir2
+##  5. Copy all 4 files of dir_one to dir2
 
 ```bash
 cp dir_one/*.txt dir2/
@@ -89,7 +89,7 @@ cp dir_one/*.txt dir2/
 
 ---
 
-## 📁 6. Copy whole `dir3` to `dir2`
+##  6. Copy whole `dir3` to `dir2`
 
 ```bash
 cp -r dir3 dir2/
@@ -99,7 +99,7 @@ cp -r dir3 dir2/
 
 ---
 
-## 🔄 7. Changing Modes and Permissions Examples
+## 7. Changing Modes and Permissions Examples
 
 ### Change permission to read-only for everyone:
 
@@ -141,7 +141,7 @@ chmod 777 dir2/text3.txt
 
 ---
 
-## 🧹 Extra: Removing Files and Directories
+##  Extra: Removing Files and Directories
 
 ### Remove a file:
 
@@ -163,8 +163,8 @@ rm -r dir4
 
 ---
 
-> 💡 Tip: Always be cautious when using `rm -r`, especially with `sudo`, to avoid deleting critical files.
+> Tip: Always be cautious when using `rm -r`, especially with `sudo`, to avoid deleting critical files.
 
 ---
 
-✅ **Done!** You now know how to manage files, directories, and permissions in Linux! 🎉
+
