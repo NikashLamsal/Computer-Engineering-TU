@@ -116,7 +116,8 @@ subplot(2,1,2);
 stem(t,x);
 xlabel('time');
 ylabel('amp');
-title('DT unit step / Nikash / 39')
+title('DT unit step / Nikash / 39');
+grid on;
 
 ```
 ### Output :
