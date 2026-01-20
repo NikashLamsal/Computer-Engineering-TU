@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'homepage/base.html' %}
+
+{% block title_block %}
+home
+{% endblock %}
+
+{% block child_block %}
+<h1>this is homepage</h1>
+
+
+
+
+{% for item in data %}
+<h2>{{item.item_id}}</h2>
+<h2>{{item.item_name}}</h2>
+
+{% endfor %}
+{% endblock %}
+
