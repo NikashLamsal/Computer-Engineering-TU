@@ -1,4 +1,4 @@
-# Lab 4 . Dynamic Routing
+# Lab 4 . Dynamic Routing configuration ( EIGRP , RIP & OSPF )
 
 
 # Connection in Cisco Packet Tracer
@@ -36,3 +36,67 @@ Router(Config-router)# no shutdown
 
 ```
 
+# OSPF Protocol (Cisco Packet Tracer)
+
+
+
+
+- **Router 1, Router 2, Router 3** were connected in a network with IDs:
+  - `10.0.0.0/8`
+  - `20.0.0.1`
+  - `30.0.0.1`
+- **PC0** with IP `192.168.1.2`
+- **PC1** with IP `192.168.2.2`
+- **PC2** with IP `192.168.3.2`
+
+Then OSPF protocol was defined for each router.
+
+### Initial Setup
+PC → Desktop → Terminal → OK
+
+
+
+
+```bash
+Router> enable
+Router# config terminal
+Router(config)# line console 0
+Router(config-line)# enable secret cisco
+Router(config-line)# end
+Router(config)# exit
+
+```
+
+```
+Router> enable
+Password: cisco
+```
+
+# Router Configuration with OSPF
+
+## Step 1: Enter Configuration Mode
+```bash
+Router> config terminal
+Router(config)# hostname R1
+R1(config)# interface gig 0/0
+R1(config-if)# ip address 192.168.1.1 255.255.255.0
+R1(config-if)# no shutdown
+
+R1(config)# interface serial 0/3/0
+R1(config-if)# ip address 10.0.0.1 255.0.0.0
+R1(config-if)# clock rate 60000
+R1(config-if)# no shutdown
+
+R1(config)# interface serial 0/3/1
+R1(config-if)# ip address 30.0.0.1 255.0.0.0
+R1(config-if)# no shutdown
+
+
+
+R1(config)# router ospf 1
+R1(config-router)# network 192.168.1.0 0.0.0.255 area 0
+R1(config-router)# network 10.0.0.0 0.255.255.255 area 0
+R1(config-router)# network 30.0.0.0 0.255.255.255 area 0
+
+
+```
