@@ -1,4 +1,4 @@
-# Lab 4 . Dynamic Routing configuration ( EIGRP , RIP & OSPF )
+# Lab 3 & 4 . Dynamic Routing configuration ( EIGRP , RIP & OSPF )
 
 
 # Connection in Cisco Packet Tracer
