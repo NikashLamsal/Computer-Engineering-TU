@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 
-// Function to convert decimal to binary
 void decimalToBinary(int num, int bin[], int n) {
     int i;
     for (i = n - 1; i >= 0; i--) {
@@ -10,7 +9,6 @@ void decimalToBinary(int num, int bin[], int n) {
     }
 }
 
-// Function to convert binary array to decimal
 int binaryToDecimal(int bin[], int n) {
     int i, decimal = 0;
     for (i = 0; i < n; i++) {
@@ -19,7 +17,6 @@ int binaryToDecimal(int bin[], int n) {
     return decimal;
 }
 
-// Function to print binary number
 void printBinary(int bin[], int n) {
     int i;
     for (i = 0; i < n; i++) {
@@ -27,14 +24,12 @@ void printBinary(int bin[], int n) {
     }
 }
 
-// Restoring Division Function
 void restoringDivision(int Q[], int M[], int n) {
-    int A[20] = {0};  // Accumulator initialized to 0
+    int A[20] = {0}; 
     int i, j;
 
     for (i = 0; i < n; i++) {
 
-        // Left shift (A,Q)
         for (j = 0; j < n - 1; j++)
             A[j] = A[j + 1];
         A[n - 1] = Q[0];
@@ -43,18 +38,14 @@ void restoringDivision(int Q[], int M[], int n) {
             Q[j] = Q[j + 1];
         Q[n - 1] = 0;
 
-        // A = A - M
         int decimalA = binaryToDecimal(A, n);
         int decimalM = binaryToDecimal(M, n);
 
         decimalA = decimalA - decimalM;
 
-        // Convert result back to binary
         decimalToBinary(decimalA, A, n);
 
-        // Check if A < 0
         if (decimalA < 0) {
-            // Restore A
             decimalA = decimalA + decimalM;
             decimalToBinary(decimalA, A, n);
             Q[n - 1] = 0;
