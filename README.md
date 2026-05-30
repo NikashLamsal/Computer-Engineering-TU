@@ -9,7 +9,8 @@ Welcome to my Computer Engineering Notes repository! This repo contains well-str
 - ✅ **Semester 2**
 - ✅ **Semester 3**
 - ✅ **Semester 4**
-- ✅ **Semester 5** Currently Running ...
+- ✅ **Semester 5**
+- ✅ **Semester 6** Currently Running ...
 
 
 
@@ -46,7 +47,7 @@ Each subject folder may contain:
 ---
 ## 📅 Upcoming Updates:
 
-- 🔜 Semester 4 and beyond...
+- 🔜 Semester 6 and beyond...
 - 🔁 More diagrams, solved problems, and important questions
 
 ---
