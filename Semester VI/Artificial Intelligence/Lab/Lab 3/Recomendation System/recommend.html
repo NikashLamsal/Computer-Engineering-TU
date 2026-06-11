@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Paper Recommender</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+    :root {
+      --bg:       #06060f;
+      --surface:  #0d0d1a;
+      --border:   rgba(255,255,255,0.07);
+      --cyan:     #00e5ff;
+      --pink:     #ff2d78;
+      --lime:     #c8ff00;
+      --amber:    #ffaa00;
+      --white:    #f0f0f8;
+      --muted:    #6b6b88;
+      --card-bg:  rgba(13,13,26,0.85);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Space Grotesk', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── Ambient background grid ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Layout ── */
+    .page { position: relative; z-index: 1; display: flex; flex-direction: column; min-height: 100vh; }
+
+    /* ── Header ── */
+    header {
+      padding: 36px 48px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: flex-end; gap: 20px;
+    }
+    .logo-mark {
+      width: 44px; height: 44px; flex-shrink: 0;
+      border: 2px solid var(--cyan);
+      border-radius: 10px;
+      display: grid; place-items: center;
+    }
+    .logo-mark svg { width: 24px; height: 24px; }
+    .header-text h1 {
+      font-family: 'Space Mono', monospace;
+      font-size: 22px;
+      letter-spacing: 0.04em;
+      color: var(--white);
+    }
+    .header-text p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 3px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Main content ── */
+    main { display: flex; flex: 1; }
+
+    /* ── LEFT PANEL: Topic Selector ── */
+    .sidebar {
+      width: 300px;
+      flex-shrink: 0;
+      border-right: 1px solid var(--border);
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sidebar-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .topic-group { margin-bottom: 24px; }
+    .group-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      padding: 0 4px;
+      margin-bottom: 8px;
+    }
+
+    .topic-btn {
+      width: 100%;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--white);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 11px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+      margin-bottom: 6px;
+      text-align: left;
+    }
+    .topic-btn:hover { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.18); }
+
+    .topic-btn.active-domain  { border-color: var(--pink);  background: rgba(255,45,120,0.1);  color: var(--pink);  }
+    .topic-btn.active-method  { border-color: var(--lime);  background: rgba(200,255,0,0.08);  color: var(--lime);  }
+    .topic-btn.active-author  { border-color: var(--amber); background: rgba(255,170,0,0.08); color: var(--amber); }
+
+    .dot {
+      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+    }
+    .dot-domain  { background: var(--pink); }
+    .dot-method  { background: var(--lime); }
+    .dot-author  { background: var(--amber); }
+
+    .badge {
+      margin-left: auto;
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.06);
+      color: var(--muted);
+    }
+
+    /* ── RIGHT PANEL: Results ── */
+    .results-panel {
+      flex: 1;
+      padding: 32px 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Welcome state */
+    .welcome-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      gap: 16px;
+      opacity: 0.55;
+    }
+    .welcome-state .big-icon {
+      width: 72px; height: 72px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      display: grid; place-items: center;
+    }
+    .welcome-state p { font-size: 15px; color: var(--muted); text-align: center; max-width: 280px; line-height: 1.6; }
+
+    /* Results header */
+    .results-header {
+      display: none;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .results-header.visible { display: flex; }
+    .topic-pill {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid;
+      font-weight: 700;
+    }
+    .pill-domain { border-color: var(--pink);  color: var(--pink);  background: rgba(255,45,120,0.1); }
+    .pill-method { border-color: var(--lime);  color: var(--lime);  background: rgba(200,255,0,0.08); }
+    .pill-author { border-color: var(--amber); color: var(--amber); background: rgba(255,170,0,0.08); }
+    .results-count { font-size: 13px; color: var(--muted); }
+
+    /* Paper cards grid */
+    .cards-grid {
+      display: none;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+    .cards-grid.visible { display: grid; }
+
+    .paper-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+    .paper-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--cyan), transparent);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .paper-card:hover { border-color: rgba(0,229,255,0.3); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,229,255,0.07); }
+    .paper-card:hover::before { opacity: 1; }
+
+    .card-number {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      margin-bottom: 10px;
+      letter-spacing: 0.08em;
+    }
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.45;
+      margin-bottom: 12px;
+    }
+
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .meta-tag {
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.05);
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .meta-tag .tag-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+
+    .card-rec {
+      font-size: 12px;
+      color: #a0a0c0;
+      line-height: 1.55;
+      padding: 10px 12px;
+      border-left: 2px solid var(--cyan);
+      background: rgba(0,229,255,0.04);
+      border-radius: 0 6px 6px 0;
+    }
+    .card-rec-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--cyan);
+      margin-bottom: 4px;
+    }
+
+    /* Empty state */
+    .empty-state {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .empty-state.visible { display: flex; }
+
+    /* Legend */
+    .legend {
+      display: flex;
+      gap: 20px;
+      padding: 16px 24px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .legend-item { display: flex; align-items: center; gap: 7px; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <header>
+    <div class="logo-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="1.8">
+        <circle cx="12" cy="12" r="3"/>
+        <line x1="12" y1="3" x2="12" y2="7"/>
+        <line x1="12" y1="17" x2="12" y2="21"/>
+        <line x1="3" y1="12" x2="7" y2="12"/>
+        <line x1="17" y1="12" x2="21" y2="12"/>
+        <line x1="5.6" y1="5.6" x2="8.5" y2="8.5"/>
+        <line x1="15.5" y1="15.5" x2="18.4" y2="18.4"/>
+        <line x1="5.6" y1="18.4" x2="8.5" y2="15.5"/>
+        <line x1="15.5" y1="8.5" x2="18.4" y2="5.6"/>
+      </svg>
+    </div>
+    <div class="header-text">
+      <h1>RESEARCH RECOMMENDER</h1>
+      <p>Academic Literature Network · 30 Papers · 5 Authors · 3 Domains · 4 Methodologies</p>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="sidebar-label">Select a Topic</div>
+
+      <div class="topic-group" id="group-domains">
+        <div class="group-label">Domains</div>
+      </div>
+
+      <div class="topic-group" id="group-methods">
+        <div class="group-label">Methodologies</div>
+      </div>
+
+      <div class="topic-group" id="group-authors">
+        <div class="group-label">Authors</div>
+      </div>
+    </nav>
+
+    <!-- Results Panel -->
+    <section class="results-panel">
+
+      <!-- Welcome state -->
+      <div class="welcome-state" id="welcome-state">
+        <div class="big-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6b6b88" stroke-width="1.5">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <p>Choose a domain, methodology, or author from the left panel to see recommended papers.</p>
+      </div>
+
+      <!-- Results header -->
+      <div class="results-header" id="results-header">
+        <span class="topic-pill" id="topic-pill">—</span>
+        <span class="results-count" id="results-count"></span>
+      </div>
+
+      <!-- Cards grid -->
+      <div class="cards-grid" id="cards-grid"></div>
+
+      <!-- Empty state -->
+      <div class="empty-state" id="empty-state">No papers found for this topic.</div>
+
+    </section>
+  </main>
+
+  <!-- Legend -->
+  <footer class="legend">
+    <div class="legend-item"><span class="dot dot-domain"></span> Domain</div>
+    <div class="legend-item"><span class="dot dot-method"></span> Methodology</div>
+    <div class="legend-item"><span class="dot dot-author"></span> Author</div>
+    <div class="legend-item"><span class="dot" style="background:var(--cyan)"></span> Paper</div>
+  </footer>
+
+</div>
+
+<script>
+const DATA_URL = 'network_data.json';
+
+let graphData = null;
+let activeBtn = null;
+
+// ── Load JSON ──────────────────────────────────────────────────────────────
+async function loadData() {
+  const res = await fetch(DATA_URL);
+  graphData = await res.json();
+  buildSidebar();
+}
+
+// ── Build sidebar buttons ──────────────────────────────────────────────────
+function buildSidebar() {
+  const domains  = graphData.nodes.filter(n => n.group === 'Domain');
+  const methods  = graphData.nodes.filter(n => n.group === 'Methodology');
+  const authors  = graphData.nodes.filter(n => n.group === 'Author');
+
+  const paperCount = (nodeId, nodeGroup) => {
+    if (nodeGroup === 'Author') {
+      return graphData.links.filter(l =>
+        l.label === 'AUTHORED' && getId(l.source) === nodeId
+      ).length;
+    }
+    if (nodeGroup === 'Domain') {
+      return graphData.links.filter(l =>
+        l.label === 'BELONGS_TO' && getId(l.target) === nodeId
+      ).length;
+    }
+    if (nodeGroup === 'Methodology') {
+      return graphData.links.filter(l =>
+        l.label === 'UTILIZED' && getId(l.target) === nodeId
+      ).length;
+    }
+    return 0;
+  };
+
+  fillGroup('group-domains', domains,  'domain',  paperCount);
+  fillGroup('group-methods', methods,  'method',  paperCount);
+  fillGroup('group-authors', authors,  'author',  paperCount);
+}
+
+function fillGroup(containerId, nodes, type, countFn) {
+  const container = document.getElementById(containerId);
+  nodes.forEach(node => {
+    const btn = document.createElement('button');
+    btn.className = 'topic-btn';
+    btn.dataset.id   = node.id;
+    btn.dataset.type = type;
+
+    const dotClass   = `dot dot-${type}`;
+    const activeClass = `active-${type}`;
+    const count = countFn(node.id, node.group);
+
+    // Friendly short label for authors
+    const label = node.id.startsWith('Dr_')
+      ? node.id.replace(/_/g, ' ')
+      : node.id;
+
+    btn.innerHTML = `
+      <span class="dot ${dotClass}"></span>
+      <span style="flex:1">${label}</span>
+      <span class="badge">${count}</span>
+    `;
+
+    btn.addEventListener('click', () => {
+      // Toggle off same button
+      if (activeBtn === btn) {
+        btn.className = 'topic-btn';
+        activeBtn = null;
+        showWelcome();
+        return;
+      }
+      if (activeBtn) activeBtn.className = 'topic-btn';
+      btn.className = `topic-btn ${activeClass}`;
+      activeBtn = btn;
+      showResults(node, type);
+    });
+
+    container.appendChild(btn);
+  });
+}
+
+function getId(ref) {
+  return typeof ref === 'object' ? ref.id : ref;
+}
+
+// ── Show results ───────────────────────────────────────────────────────────
+function showResults(topicNode, type) {
+  // Resolve related paper nodes
+  let papers = [];
+
+  if (type === 'domain') {
+    const related = new Set(
+      graphData.links
+        .filter(l => l.label === 'BELONGS_TO' && getId(l.target) === topicNode.id)
+        .map(l => getId(l.source))
+    );
+    papers = graphData.nodes.filter(n => n.group === 'Paper' && related.has(n.id));
+  } else if (type === 'method') {
+    const related = new Set(
+      graphData.links
+        .filter(l => l.label === 'UTILIZED' && getId(l.target) === topicNode.id)
+        .map(l => getId(l.source))
+    );
+    papers = graphData.nodes.filter(n => n.group === 'Paper' && related.has(n.id));
+  } else if (type === 'author') {
+    const related = new Set(
+      graphData.links
+        .filter(l => l.label === 'AUTHORED' && getId(l.source) === topicNode.id)
+        .map(l => getId(l.target))
+    );
+    papers = graphData.nodes.filter(n => n.group === 'Paper' && related.has(n.id));
+  }
+
+  // Build card info: attach domain + methodology per paper
+  const paperMeta = papers.map(p => {
+    const domain = graphData.links
+      .find(l => l.label === 'BELONGS_TO' && getId(l.source) === p.id);
+    const method = graphData.links
+      .find(l => l.label === 'UTILIZED'   && getId(l.source) === p.id);
+    const author = graphData.links
+      .find(l => l.label === 'AUTHORED'   && getId(l.target) === p.id);
+    return {
+      node: p,
+      domain: domain ? getId(domain.target) : null,
+      method: method ? getId(method.target) : null,
+      author: author ? getId(author.source).replace(/_/g, ' ') : null,
+    };
+  });
+
+  // Header pill
+  const pillClass = { domain: 'pill-domain', method: 'pill-method', author: 'pill-author' }[type];
+  const label = topicNode.id.startsWith('Dr_') ? topicNode.id.replace(/_/g, ' ') : topicNode.id;
+  document.getElementById('topic-pill').textContent = label;
+  document.getElementById('topic-pill').className = `topic-pill ${pillClass}`;
+  document.getElementById('results-count').textContent =
+    `${papers.length} paper${papers.length !== 1 ? 's' : ''} found`;
+
+  // Render cards
+  const grid = document.getElementById('cards-grid');
+  grid.innerHTML = '';
+
+  if (papers.length === 0) {
+    document.getElementById('welcome-state').style.display = 'none';
+    document.getElementById('results-header').classList.add('visible');
+    document.getElementById('cards-grid').classList.remove('visible');
+    document.getElementById('empty-state').classList.add('visible');
+    return;
+  }
+
+  paperMeta.forEach((pm, idx) => {
+    const card = document.createElement('div');
+    card.className = 'paper-card';
+
+    const domainTag = pm.domain
+      ? `<span class="meta-tag"><span class="tag-dot dot-domain"></span>${pm.domain}</span>` : '';
+    const methodTag = pm.method
+      ? `<span class="meta-tag"><span class="tag-dot dot-method"></span>${pm.method}</span>` : '';
+    const authorTag = pm.author
+      ? `<span class="meta-tag"><span class="tag-dot dot-author"></span>${pm.author}</span>` : '';
+
+    card.innerHTML = `
+      <div class="card-number">PAPER · ${String(idx + 1).padStart(2, '0')}</div>
+      <div class="card-title">${pm.node.id}</div>
+      <div class="card-meta">${domainTag}${methodTag}${authorTag}</div>
+      <div class="card-rec">
+        <div class="card-rec-label">Action Guide</div>
+        ${pm.node.rec}
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+
+  document.getElementById('welcome-state').style.display = 'none';
+  document.getElementById('results-header').classList.add('visible');
+  document.getElementById('cards-grid').classList.add('visible');
+  document.getElementById('empty-state').classList.remove('visible');
+}
+
+function showWelcome() {
+  document.getElementById('welcome-state').style.display = '';
+  document.getElementById('results-header').classList.remove('visible');
+  document.getElementById('cards-grid').classList.remove('visible');
+  document.getElementById('empty-state').classList.remove('visible');
+}
+
+// ── Init ───────────────────────────────────────────────────────────────────
+loadData();
+</script>
+</body>
+</html>

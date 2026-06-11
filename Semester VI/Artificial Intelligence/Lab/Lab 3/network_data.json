@@ -1,0 +1,978 @@
+{
+    "nodes": [
+        {
+            "id": "Computer Vision",
+            "group": "Domain",
+            "category": "Academic Field",
+            "rec": "Review literature cross-sections to find multi-disciplinary opportunities."
+        },
+        {
+            "id": "Natural Language Processing",
+            "group": "Domain",
+            "category": "Academic Field",
+            "rec": "Review literature cross-sections to find multi-disciplinary opportunities."
+        },
+        {
+            "id": "Geometric Deep Learning",
+            "group": "Domain",
+            "category": "Academic Field",
+            "rec": "Review literature cross-sections to find multi-disciplinary opportunities."
+        },
+        {
+            "id": "Transformer Architectures",
+            "group": "Methodology",
+            "category": "Core Algorithm",
+            "rec": "Lab deployment vector: Isolate this framework to benchmark operational runtime bottlenecks."
+        },
+        {
+            "id": "Convolutional Neural Networks",
+            "group": "Methodology",
+            "category": "Core Algorithm",
+            "rec": "Lab deployment vector: Isolate this framework to benchmark operational runtime bottlenecks."
+        },
+        {
+            "id": "Graph Neural Networks",
+            "group": "Methodology",
+            "category": "Core Algorithm",
+            "rec": "Lab deployment vector: Isolate this framework to benchmark operational runtime bottlenecks."
+        },
+        {
+            "id": "Contrastive Learning",
+            "group": "Methodology",
+            "category": "Core Algorithm",
+            "rec": "Lab deployment vector: Isolate this framework to benchmark operational runtime bottlenecks."
+        },
+        {
+            "id": "Dr_Y_Bengio",
+            "group": "Author",
+            "category": "Principal Investigator",
+            "rec": "Analyze h-index and structural degree co-authorship paths to optimize grant sourcing."
+        },
+        {
+            "id": "Dr_G_Hinton",
+            "group": "Author",
+            "category": "Principal Investigator",
+            "rec": "Analyze h-index and structural degree co-authorship paths to optimize grant sourcing."
+        },
+        {
+            "id": "Dr_Y_LeCun",
+            "group": "Author",
+            "category": "Principal Investigator",
+            "rec": "Analyze h-index and structural degree co-authorship paths to optimize grant sourcing."
+        },
+        {
+            "id": "Dr_A_Vaswani",
+            "group": "Author",
+            "category": "Principal Investigator",
+            "rec": "Analyze h-index and structural degree co-authorship paths to optimize grant sourcing."
+        },
+        {
+            "id": "Dr_J_Leskovec",
+            "group": "Author",
+            "category": "Principal Investigator",
+            "rec": "Analyze h-index and structural degree co-authorship paths to optimize grant sourcing."
+        },
+        {
+            "id": "ResNet-3D: Residual Grids for Spatial Volumetric Analysis",
+            "group": "Paper",
+            "category": "Published under Computer Vision",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "ViT-Scale: Scaling Vision Transformers for Dense Prediction",
+            "group": "Paper",
+            "category": "Published under Computer Vision",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "SimCLR-V3: Contrastive Frameworks for Self-Supervised Vision",
+            "group": "Paper",
+            "category": "Published under Computer Vision",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Masked Autoencoders Are Scalable Vision Visualizers",
+            "group": "Paper",
+            "category": "Published under Computer Vision",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "NeRF-Graph: Neural Radiance Fields on Graph Topologies",
+            "group": "Paper",
+            "category": "Published under Computer Vision",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Real-Time Semantic Segmentation via Dilated Spatial Kernels",
+            "group": "Paper",
+            "category": "Published under Computer Vision",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Cross-Modal Vector Alignment in Generative Vision Spaces",
+            "group": "Paper",
+            "category": "Published under Computer Vision",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Attention-Driven Object Detection in High-Resolution Imagery",
+            "group": "Paper",
+            "category": "Published under Computer Vision",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Unsupervised Visual Representation via Contrastive Residuals",
+            "group": "Paper",
+            "category": "Published under Computer Vision",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Geometry-Aware Convolutions for 3D Point Cloud Processing",
+            "group": "Paper",
+            "category": "Published under Computer Vision",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "BERT-Large: Pre-training of Deep Bidirectional Transformers",
+            "group": "Paper",
+            "category": "Published under Natural Language Processing",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "GPT-Next: Autoregressive Language Modeling at Scale",
+            "group": "Paper",
+            "category": "Published under Natural Language Processing",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Contrastive Sentence Embeddings via Semantic Invariance",
+            "group": "Paper",
+            "category": "Published under Natural Language Processing",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Long-Short Sequence Parsing via Linear Attention Windows",
+            "group": "Paper",
+            "category": "Published under Natural Language Processing",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Text-Graph Recurrent Transformers for Structured Document Analysis",
+            "group": "Paper",
+            "category": "Published under Natural Language Processing",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Exploring the Limits of Self-Supervised Machine Translation",
+            "group": "Paper",
+            "category": "Published under Natural Language Processing",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Dependency-Parsing Convolutions for Low-Resource Languages",
+            "group": "Paper",
+            "category": "Published under Natural Language Processing",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Token-Free Language Representations via Character-Level Processing",
+            "group": "Paper",
+            "category": "Published under Natural Language Processing",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Retrieval-Augmented Transformers for Dynamic Knowledge Graphs",
+            "group": "Paper",
+            "category": "Published under Natural Language Processing",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Evaluating Prompt Calibration Metrics in LLM Quantization",
+            "group": "Paper",
+            "category": "Published under Natural Language Processing",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "GCN-V2: Scalable Graph Convolutional Networks via Node Sampling",
+            "group": "Paper",
+            "category": "Published under Geometric Deep Learning",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Graph Attention Networks with Multi-Head Structural Alignment",
+            "group": "Paper",
+            "category": "Published under Geometric Deep Learning",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Self-Supervised Graph Contrastive Learning via Subgraph Masking",
+            "group": "Paper",
+            "category": "Published under Geometric Deep Learning",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Message-Passing Frameworks for Heterogeneous Molecular Topologies",
+            "group": "Paper",
+            "category": "Published under Geometric Deep Learning",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Graph Convolutions Meet Vision Transformers: A Unified Review",
+            "group": "Paper",
+            "category": "Published under Geometric Deep Learning",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Temporal Graph Networks for Dynamic Relational Interaction Stream",
+            "group": "Paper",
+            "category": "Published under Geometric Deep Learning",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Inductive Representation Learning on Large-Scale Social Webs",
+            "group": "Paper",
+            "category": "Published under Geometric Deep Learning",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Contrastive Node Clustering via Graph Diffusion Wavelets",
+            "group": "Paper",
+            "category": "Published under Geometric Deep Learning",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Deep Generative Models for Graph Structure Deconvolution",
+            "group": "Paper",
+            "category": "Published under Geometric Deep Learning",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        },
+        {
+            "id": "Scalable Graph Neural Architecture Search via Gradient Descent",
+            "group": "Paper",
+            "category": "Published under Geometric Deep Learning",
+            "rec": "Literature Mapping Blueprint: Verify citation weights to evaluate the foundational novelty of this work."
+        }
+    ],
+    "links": [
+        {
+            "source": "Evaluating Prompt Calibration Metrics in LLM Quantization",
+            "target": "Natural Language Processing",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Long-Short Sequence Parsing via Linear Attention Windows",
+            "target": "Transformer Architectures",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Text-Graph Recurrent Transformers for Structured Document Analysis",
+            "target": "Natural Language Processing",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "ViT-Scale: Scaling Vision Transformers for Dense Prediction",
+            "target": "Computer Vision",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Dr_G_Hinton",
+            "target": "Contrastive Node Clustering via Graph Diffusion Wavelets",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Dr_Y_Bengio",
+            "target": "Token-Free Language Representations via Character-Level Processing",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Retrieval-Augmented Transformers for Dynamic Knowledge Graphs",
+            "target": "Natural Language Processing",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Temporal Graph Networks for Dynamic Relational Interaction Stream",
+            "target": "Geometric Deep Learning",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Evaluating Prompt Calibration Metrics in LLM Quantization",
+            "target": "Unsupervised Visual Representation via Contrastive Residuals",
+            "label": "CITES"
+        },
+        {
+            "source": "Real-Time Semantic Segmentation via Dilated Spatial Kernels",
+            "target": "Masked Autoencoders Are Scalable Vision Visualizers",
+            "label": "CITES"
+        },
+        {
+            "source": "Contrastive Sentence Embeddings via Semantic Invariance",
+            "target": "BERT-Large: Pre-training of Deep Bidirectional Transformers",
+            "label": "CITES"
+        },
+        {
+            "source": "Dr_A_Vaswani",
+            "target": "Attention-Driven Object Detection in High-Resolution Imagery",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Cross-Modal Vector Alignment in Generative Vision Spaces",
+            "target": "ResNet-3D: Residual Grids for Spatial Volumetric Analysis",
+            "label": "CITES"
+        },
+        {
+            "source": "Real-Time Semantic Segmentation via Dilated Spatial Kernels",
+            "target": "Computer Vision",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Dr_J_Leskovec",
+            "target": "Retrieval-Augmented Transformers for Dynamic Knowledge Graphs",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Dr_Y_LeCun",
+            "target": "Masked Autoencoders Are Scalable Vision Visualizers",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Evaluating Prompt Calibration Metrics in LLM Quantization",
+            "target": "Transformer Architectures",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Text-Graph Recurrent Transformers for Structured Document Analysis",
+            "target": "GPT-Next: Autoregressive Language Modeling at Scale",
+            "label": "CITES"
+        },
+        {
+            "source": "Retrieval-Augmented Transformers for Dynamic Knowledge Graphs",
+            "target": "Contrastive Sentence Embeddings via Semantic Invariance",
+            "label": "CITES"
+        },
+        {
+            "source": "Self-Supervised Graph Contrastive Learning via Subgraph Masking",
+            "target": "Graph Attention Networks with Multi-Head Structural Alignment",
+            "label": "CITES"
+        },
+        {
+            "source": "Contrastive Sentence Embeddings via Semantic Invariance",
+            "target": "Natural Language Processing",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Dr_Y_Bengio",
+            "target": "Scalable Graph Neural Architecture Search via Gradient Descent",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Temporal Graph Networks for Dynamic Relational Interaction Stream",
+            "target": "Graph Neural Networks",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Dr_J_Leskovec",
+            "target": "GCN-V2: Scalable Graph Convolutional Networks via Node Sampling",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Dr_G_Hinton",
+            "target": "Message-Passing Frameworks for Heterogeneous Molecular Topologies",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "GCN-V2: Scalable Graph Convolutional Networks via Node Sampling",
+            "target": "BERT-Large: Pre-training of Deep Bidirectional Transformers",
+            "label": "CITES"
+        },
+        {
+            "source": "Masked Autoencoders Are Scalable Vision Visualizers",
+            "target": "Computer Vision",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "GPT-Next: Autoregressive Language Modeling at Scale",
+            "target": "Natural Language Processing",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "ViT-Scale: Scaling Vision Transformers for Dense Prediction",
+            "target": "Transformer Architectures",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Attention-Driven Object Detection in High-Resolution Imagery",
+            "target": "Transformer Architectures",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Temporal Graph Networks for Dynamic Relational Interaction Stream",
+            "target": "Contrastive Sentence Embeddings via Semantic Invariance",
+            "label": "CITES"
+        },
+        {
+            "source": "Retrieval-Augmented Transformers for Dynamic Knowledge Graphs",
+            "target": "Dependency-Parsing Convolutions for Low-Resource Languages",
+            "label": "CITES"
+        },
+        {
+            "source": "Dr_J_Leskovec",
+            "target": "Geometry-Aware Convolutions for 3D Point Cloud Processing",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Unsupervised Visual Representation via Contrastive Residuals",
+            "target": "ViT-Scale: Scaling Vision Transformers for Dense Prediction",
+            "label": "CITES"
+        },
+        {
+            "source": "Dr_Y_LeCun",
+            "target": "Deep Generative Models for Graph Structure Deconvolution",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Dr_Y_LeCun",
+            "target": "Real-Time Semantic Segmentation via Dilated Spatial Kernels",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Dr_Y_Bengio",
+            "target": "Contrastive Sentence Embeddings via Semantic Invariance",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "GCN-V2: Scalable Graph Convolutional Networks via Node Sampling",
+            "target": "Geometric Deep Learning",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Long-Short Sequence Parsing via Linear Attention Windows",
+            "target": "GPT-Next: Autoregressive Language Modeling at Scale",
+            "label": "CITES"
+        },
+        {
+            "source": "Token-Free Language Representations via Character-Level Processing",
+            "target": "Natural Language Processing",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Dr_Y_Bengio",
+            "target": "Exploring the Limits of Self-Supervised Machine Translation",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Temporal Graph Networks for Dynamic Relational Interaction Stream",
+            "target": "Graph Convolutions Meet Vision Transformers: A Unified Review",
+            "label": "CITES"
+        },
+        {
+            "source": "Dr_J_Leskovec",
+            "target": "Temporal Graph Networks for Dynamic Relational Interaction Stream",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Self-Supervised Graph Contrastive Learning via Subgraph Masking",
+            "target": "GCN-V2: Scalable Graph Convolutional Networks via Node Sampling",
+            "label": "CITES"
+        },
+        {
+            "source": "Token-Free Language Representations via Character-Level Processing",
+            "target": "Long-Short Sequence Parsing via Linear Attention Windows",
+            "label": "CITES"
+        },
+        {
+            "source": "Scalable Graph Neural Architecture Search via Gradient Descent",
+            "target": "Temporal Graph Networks for Dynamic Relational Interaction Stream",
+            "label": "CITES"
+        },
+        {
+            "source": "Graph Attention Networks with Multi-Head Structural Alignment",
+            "target": "Long-Short Sequence Parsing via Linear Attention Windows",
+            "label": "CITES"
+        },
+        {
+            "source": "Dr_G_Hinton",
+            "target": "SimCLR-V3: Contrastive Frameworks for Self-Supervised Vision",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Retrieval-Augmented Transformers for Dynamic Knowledge Graphs",
+            "target": "Long-Short Sequence Parsing via Linear Attention Windows",
+            "label": "CITES"
+        },
+        {
+            "source": "Masked Autoencoders Are Scalable Vision Visualizers",
+            "target": "Transformer Architectures",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Temporal Graph Networks for Dynamic Relational Interaction Stream",
+            "target": "Message-Passing Frameworks for Heterogeneous Molecular Topologies",
+            "label": "CITES"
+        },
+        {
+            "source": "BERT-Large: Pre-training of Deep Bidirectional Transformers",
+            "target": "Transformer Architectures",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "SimCLR-V3: Contrastive Frameworks for Self-Supervised Vision",
+            "target": "Computer Vision",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Geometry-Aware Convolutions for 3D Point Cloud Processing",
+            "target": "Computer Vision",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Exploring the Limits of Self-Supervised Machine Translation",
+            "target": "Text-Graph Recurrent Transformers for Structured Document Analysis",
+            "label": "CITES"
+        },
+        {
+            "source": "Dependency-Parsing Convolutions for Low-Resource Languages",
+            "target": "Geometry-Aware Convolutions for 3D Point Cloud Processing",
+            "label": "CITES"
+        },
+        {
+            "source": "Exploring the Limits of Self-Supervised Machine Translation",
+            "target": "ViT-Scale: Scaling Vision Transformers for Dense Prediction",
+            "label": "CITES"
+        },
+        {
+            "source": "Graph Attention Networks with Multi-Head Structural Alignment",
+            "target": "GCN-V2: Scalable Graph Convolutional Networks via Node Sampling",
+            "label": "CITES"
+        },
+        {
+            "source": "Graph Convolutions Meet Vision Transformers: A Unified Review",
+            "target": "Graph Attention Networks with Multi-Head Structural Alignment",
+            "label": "CITES"
+        },
+        {
+            "source": "Contrastive Sentence Embeddings via Semantic Invariance",
+            "target": "NeRF-Graph: Neural Radiance Fields on Graph Topologies",
+            "label": "CITES"
+        },
+        {
+            "source": "Attention-Driven Object Detection in High-Resolution Imagery",
+            "target": "Masked Autoencoders Are Scalable Vision Visualizers",
+            "label": "CITES"
+        },
+        {
+            "source": "Dr_A_Vaswani",
+            "target": "ViT-Scale: Scaling Vision Transformers for Dense Prediction",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Dr_G_Hinton",
+            "target": "Cross-Modal Vector Alignment in Generative Vision Spaces",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Dr_A_Vaswani",
+            "target": "GPT-Next: Autoregressive Language Modeling at Scale",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Contrastive Node Clustering via Graph Diffusion Wavelets",
+            "target": "Inductive Representation Learning on Large-Scale Social Webs",
+            "label": "CITES"
+        },
+        {
+            "source": "Dependency-Parsing Convolutions for Low-Resource Languages",
+            "target": "Contrastive Sentence Embeddings via Semantic Invariance",
+            "label": "CITES"
+        },
+        {
+            "source": "BERT-Large: Pre-training of Deep Bidirectional Transformers",
+            "target": "Natural Language Processing",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "GPT-Next: Autoregressive Language Modeling at Scale",
+            "target": "Unsupervised Visual Representation via Contrastive Residuals",
+            "label": "CITES"
+        },
+        {
+            "source": "Attention-Driven Object Detection in High-Resolution Imagery",
+            "target": "Computer Vision",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Dr_J_Leskovec",
+            "target": "Inductive Representation Learning on Large-Scale Social Webs",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Dr_A_Vaswani",
+            "target": "Graph Attention Networks with Multi-Head Structural Alignment",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Dr_J_Leskovec",
+            "target": "NeRF-Graph: Neural Radiance Fields on Graph Topologies",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Long-Short Sequence Parsing via Linear Attention Windows",
+            "target": "BERT-Large: Pre-training of Deep Bidirectional Transformers",
+            "label": "CITES"
+        },
+        {
+            "source": "Token-Free Language Representations via Character-Level Processing",
+            "target": "Geometry-Aware Convolutions for 3D Point Cloud Processing",
+            "label": "CITES"
+        },
+        {
+            "source": "Unsupervised Visual Representation via Contrastive Residuals",
+            "target": "Computer Vision",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Message-Passing Frameworks for Heterogeneous Molecular Topologies",
+            "target": "Geometric Deep Learning",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Exploring the Limits of Self-Supervised Machine Translation",
+            "target": "Natural Language Processing",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Retrieval-Augmented Transformers for Dynamic Knowledge Graphs",
+            "target": "Real-Time Semantic Segmentation via Dilated Spatial Kernels",
+            "label": "CITES"
+        },
+        {
+            "source": "NeRF-Graph: Neural Radiance Fields on Graph Topologies",
+            "target": "Graph Neural Networks",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "NeRF-Graph: Neural Radiance Fields on Graph Topologies",
+            "target": "Computer Vision",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Contrastive Sentence Embeddings via Semantic Invariance",
+            "target": "Contrastive Learning",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Attention-Driven Object Detection in High-Resolution Imagery",
+            "target": "Real-Time Semantic Segmentation via Dilated Spatial Kernels",
+            "label": "CITES"
+        },
+        {
+            "source": "Unsupervised Visual Representation via Contrastive Residuals",
+            "target": "Contrastive Learning",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Scalable Graph Neural Architecture Search via Gradient Descent",
+            "target": "Geometric Deep Learning",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Dr_Y_LeCun",
+            "target": "ResNet-3D: Residual Grids for Spatial Volumetric Analysis",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Dr_A_Vaswani",
+            "target": "Long-Short Sequence Parsing via Linear Attention Windows",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Dr_Y_LeCun",
+            "target": "Dependency-Parsing Convolutions for Low-Resource Languages",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Inductive Representation Learning on Large-Scale Social Webs",
+            "target": "Self-Supervised Graph Contrastive Learning via Subgraph Masking",
+            "label": "CITES"
+        },
+        {
+            "source": "ResNet-3D: Residual Grids for Spatial Volumetric Analysis",
+            "target": "Convolutional Neural Networks",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Self-Supervised Graph Contrastive Learning via Subgraph Masking",
+            "target": "Contrastive Learning",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Long-Short Sequence Parsing via Linear Attention Windows",
+            "target": "Natural Language Processing",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Cross-Modal Vector Alignment in Generative Vision Spaces",
+            "target": "Computer Vision",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "GPT-Next: Autoregressive Language Modeling at Scale",
+            "target": "BERT-Large: Pre-training of Deep Bidirectional Transformers",
+            "label": "CITES"
+        },
+        {
+            "source": "Attention-Driven Object Detection in High-Resolution Imagery",
+            "target": "ResNet-3D: Residual Grids for Spatial Volumetric Analysis",
+            "label": "CITES"
+        },
+        {
+            "source": "Token-Free Language Representations via Character-Level Processing",
+            "target": "Transformer Architectures",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Message-Passing Frameworks for Heterogeneous Molecular Topologies",
+            "target": "Self-Supervised Graph Contrastive Learning via Subgraph Masking",
+            "label": "CITES"
+        },
+        {
+            "source": "Text-Graph Recurrent Transformers for Structured Document Analysis",
+            "target": "Graph Neural Networks",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Graph Attention Networks with Multi-Head Structural Alignment",
+            "target": "Transformer Architectures",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Deep Generative Models for Graph Structure Deconvolution",
+            "target": "Contrastive Node Clustering via Graph Diffusion Wavelets",
+            "label": "CITES"
+        },
+        {
+            "source": "Cross-Modal Vector Alignment in Generative Vision Spaces",
+            "target": "Contrastive Learning",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Retrieval-Augmented Transformers for Dynamic Knowledge Graphs",
+            "target": "Transformer Architectures",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Scalable Graph Neural Architecture Search via Gradient Descent",
+            "target": "Graph Neural Networks",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Graph Convolutions Meet Vision Transformers: A Unified Review",
+            "target": "Message-Passing Frameworks for Heterogeneous Molecular Topologies",
+            "label": "CITES"
+        },
+        {
+            "source": "Geometry-Aware Convolutions for 3D Point Cloud Processing",
+            "target": "Cross-Modal Vector Alignment in Generative Vision Spaces",
+            "label": "CITES"
+        },
+        {
+            "source": "Graph Convolutions Meet Vision Transformers: A Unified Review",
+            "target": "Self-Supervised Graph Contrastive Learning via Subgraph Masking",
+            "label": "CITES"
+        },
+        {
+            "source": "Real-Time Semantic Segmentation via Dilated Spatial Kernels",
+            "target": "Convolutional Neural Networks",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "SimCLR-V3: Contrastive Frameworks for Self-Supervised Vision",
+            "target": "Contrastive Learning",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Contrastive Node Clustering via Graph Diffusion Wavelets",
+            "target": "Geometric Deep Learning",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Dependency-Parsing Convolutions for Low-Resource Languages",
+            "target": "Convolutional Neural Networks",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Self-Supervised Graph Contrastive Learning via Subgraph Masking",
+            "target": "Geometric Deep Learning",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Deep Generative Models for Graph Structure Deconvolution",
+            "target": "Geometric Deep Learning",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Deep Generative Models for Graph Structure Deconvolution",
+            "target": "Temporal Graph Networks for Dynamic Relational Interaction Stream",
+            "label": "CITES"
+        },
+        {
+            "source": "Dr_G_Hinton",
+            "target": "Unsupervised Visual Representation via Contrastive Residuals",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Dr_A_Vaswani",
+            "target": "BERT-Large: Pre-training of Deep Bidirectional Transformers",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Inductive Representation Learning on Large-Scale Social Webs",
+            "target": "Geometric Deep Learning",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Geometry-Aware Convolutions for 3D Point Cloud Processing",
+            "target": "Convolutional Neural Networks",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Text-Graph Recurrent Transformers for Structured Document Analysis",
+            "target": "Contrastive Sentence Embeddings via Semantic Invariance",
+            "label": "CITES"
+        },
+        {
+            "source": "Exploring the Limits of Self-Supervised Machine Translation",
+            "target": "Contrastive Learning",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Scalable Graph Neural Architecture Search via Gradient Descent",
+            "target": "Inductive Representation Learning on Large-Scale Social Webs",
+            "label": "CITES"
+        },
+        {
+            "source": "Temporal Graph Networks for Dynamic Relational Interaction Stream",
+            "target": "GCN-V2: Scalable Graph Convolutional Networks via Node Sampling",
+            "label": "CITES"
+        },
+        {
+            "source": "Dependency-Parsing Convolutions for Low-Resource Languages",
+            "target": "GPT-Next: Autoregressive Language Modeling at Scale",
+            "label": "CITES"
+        },
+        {
+            "source": "GPT-Next: Autoregressive Language Modeling at Scale",
+            "target": "Transformer Architectures",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Token-Free Language Representations via Character-Level Processing",
+            "target": "Contrastive Sentence Embeddings via Semantic Invariance",
+            "label": "CITES"
+        },
+        {
+            "source": "Dr_J_Leskovec",
+            "target": "Text-Graph Recurrent Transformers for Structured Document Analysis",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Geometry-Aware Convolutions for 3D Point Cloud Processing",
+            "target": "ResNet-3D: Residual Grids for Spatial Volumetric Analysis",
+            "label": "CITES"
+        },
+        {
+            "source": "Evaluating Prompt Calibration Metrics in LLM Quantization",
+            "target": "GPT-Next: Autoregressive Language Modeling at Scale",
+            "label": "CITES"
+        },
+        {
+            "source": "Evaluating Prompt Calibration Metrics in LLM Quantization",
+            "target": "Exploring the Limits of Self-Supervised Machine Translation",
+            "label": "CITES"
+        },
+        {
+            "source": "Geometry-Aware Convolutions for 3D Point Cloud Processing",
+            "target": "SimCLR-V3: Contrastive Frameworks for Self-Supervised Vision",
+            "label": "CITES"
+        },
+        {
+            "source": "Contrastive Node Clustering via Graph Diffusion Wavelets",
+            "target": "Contrastive Learning",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Inductive Representation Learning on Large-Scale Social Webs",
+            "target": "Graph Neural Networks",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Graph Convolutions Meet Vision Transformers: A Unified Review",
+            "target": "Transformer Architectures",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Graph Convolutions Meet Vision Transformers: A Unified Review",
+            "target": "Geometric Deep Learning",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Dependency-Parsing Convolutions for Low-Resource Languages",
+            "target": "BERT-Large: Pre-training of Deep Bidirectional Transformers",
+            "label": "CITES"
+        },
+        {
+            "source": "Dr_Y_LeCun",
+            "target": "Graph Convolutions Meet Vision Transformers: A Unified Review",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "GCN-V2: Scalable Graph Convolutional Networks via Node Sampling",
+            "target": "Graph Neural Networks",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Graph Attention Networks with Multi-Head Structural Alignment",
+            "target": "Geometric Deep Learning",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Message-Passing Frameworks for Heterogeneous Molecular Topologies",
+            "target": "Graph Neural Networks",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Evaluating Prompt Calibration Metrics in LLM Quantization",
+            "target": "BERT-Large: Pre-training of Deep Bidirectional Transformers",
+            "label": "CITES"
+        },
+        {
+            "source": "Dr_Y_Bengio",
+            "target": "Self-Supervised Graph Contrastive Learning via Subgraph Masking",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Deep Generative Models for Graph Structure Deconvolution",
+            "target": "Convolutional Neural Networks",
+            "label": "UTILIZED"
+        },
+        {
+            "source": "Dependency-Parsing Convolutions for Low-Resource Languages",
+            "target": "Natural Language Processing",
+            "label": "BELONGS_TO"
+        },
+        {
+            "source": "Dr_Y_Bengio",
+            "target": "Evaluating Prompt Calibration Metrics in LLM Quantization",
+            "label": "AUTHORED"
+        },
+        {
+            "source": "Contrastive Sentence Embeddings via Semantic Invariance",
+            "target": "GPT-Next: Autoregressive Language Modeling at Scale",
+            "label": "CITES"
+        },
+        {
+            "source": "ResNet-3D: Residual Grids for Spatial Volumetric Analysis",
+            "target": "Computer Vision",
+            "label": "BELONGS_TO"
+        }
+    ]
+}

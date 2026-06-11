@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Academic Literature Semantic Network</title>
+    <script src="https://unpkg.com/3d-force-graph"></script>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #050508; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        #control-panel { position: absolute; top: 20px; left: 20px; color: #ffffff; z-index: 10; pointer-events: none; }
+        h2 { margin: 0; color: #00ffff; font-size: 22px; text-transform: uppercase; letter-spacing: 1px; }
+        
+        #meta-card { 
+            position: absolute; top: 20px; right: 20px; width: 340px; 
+            background: rgba(10, 10, 20, 0.92); border: 1px solid #00ffff; 
+            border-radius: 8px; padding: 25px; color: #ffffff; z-index: 10;
+            box-shadow: 0 4px 30px rgba(0, 255, 255, 0.25); display: none;
+        }
+        .card-header { font-size: 18px; font-weight: bold; color: #ff007f; margin-bottom: 12px; border-bottom: 1px solid #333; padding-bottom: 8px; line-height: 1.4; }
+        .meta-label { color: #aaaaaa; font-size: 11px; text-transform: uppercase; margin-top: 12px; font-weight: bold; letter-spacing: 0.5px; }
+        .meta-value { color: #ffffff; font-size: 14px; margin-bottom: 8px; line-height: 1.3; }
+        .rec-box { background: rgba(204, 255, 0, 0.12); border-left: 4px solid #ccff00; padding: 12px; margin-top: 15px; font-size: 13px; color: #e5ff80; line-height: 1.4; }
+    </style>
+</head>
+<body>
+
+    <div id="control-panel">
+        <h2>Literature Citation Web</h2>
+        <p style="color: #888; margin: 5px 0;">Hover over any connection line to see the exact relationship label.</p>
+    </div>
+
+    <div id="meta-card">
+        <div id="card-node-id" class="card-header">Target Repository Entity</div>
+        <div class="meta-label">Node Taxonomy</div>
+        <div id="card-node-group" class="meta-value">-</div>
+        <div class="meta-label">Contextual Category</div>
+        <div id="card-node-category" class="meta-value">-</div>
+        <div class="meta-label">Academic Action Item Guide</div>
+        <div id="card-node-rec" class="rec-box">-</div>
+    </div>
+
+    <div id="3d-graph"></div>
+
+    <script>
+        const colorPalette = { 
+            "Paper": "#00ffff",        
+            "Domain": "#ff007f",       
+            "Methodology": "#ccff00",  
+            "Author": "#ffaa00"        
+        };
+
+        let selectedNode = null;
+        const highlightNodes = new Set();
+        const highlightLinks = new Set();
+
+        const Graph = ForceGraph3D()(document.getElementById('3d-graph'))
+            .jsonUrl('network_data.json')
+            .nodeLabel('id')
+            .nodeColor(node => {
+                if (highlightNodes.size && !highlightNodes.has(node.id)) return 'rgba(30,30,45,0.06)';
+                return colorPalette[node.group] || '#ffffff';
+            })
+            .nodeVal(node => {
+                if (node.group === 'Domain') return 8;
+                if (node.group === 'Methodology') return 6;
+                return 3.5;
+            }) 
+            
+            // ============================================================
+            // FIXED LINE AND RELATIONSHIP PROPERTIES (ROBUST RENDERING)
+            // ============================================================
+            .linkLabel('label') // Native hover tooltip for edge descriptions (100% reliable)
+            .linkWidth(link => highlightLinks.has(link) ? 4.0 : 1.5) // Make lines thicker and visible
+            .linkColor(link => {
+                if (highlightLinks.size && !highlightLinks.has(link)) return 'rgba(40, 40, 55, 0.02)';
+                return link.label === 'CITES' ? '#00ffff' : '#88888b'; // Cyan for citations, grey for attributes
+            })
+            // Add animated streaming photons moving down the lines to make pathways visible
+            .linkDirectionalParticles(link => (highlightLinks.size === 0 || highlightLinks.has(link)) ? 3 : 0)
+            .linkDirectionalParticleWidth(2.5)
+            .linkDirectionalParticleSpeed(0.004)
+            // ============================================================
+            
+            .onNodeClick(node => {
+                const distance = 130; 
+                const distRatio = 1 + distance/Math.hypot(node.x, node.y, node.z);
+                Graph.cameraPosition({ x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio }, node, 1500);
+
+                highlightNodes.clear();
+                highlightLinks.clear();
+
+                selectedNode = node;
+                highlightNodes.add(node.id);
+                Graph.graphData().links.forEach(link => {
+                    const sourceId = typeof link.source === 'object' ? link.source.id : link.source;
+                    const targetId = typeof link.target === 'object' ? link.target.id : link.target;
+                    
+                    if (sourceId === node.id || targetId === node.id) {
+                        highlightLinks.add(link);
+                        highlightNodes.add(sourceId);
+                        highlightNodes.add(targetId);
+                    }
+                });
+
+                document.getElementById('card-node-id').innerText = node.id;
+                document.getElementById('card-node-group').innerText = node.group;
+                document.getElementById('card-node-category').innerText = node.category;
+                document.getElementById('card-node-rec').innerText = node.rec;
+                document.getElementById('meta-card').style.display = 'block';
+
+                Graph.nodeColor(Graph.nodeColor()).linkColor(Graph.linkColor()).linkWidth(Graph.linkWidth());
+            })
+            .onBackgroundClick(() => {
+                highlightNodes.clear();
+                highlightLinks.clear();
+                selectedNode = null;
+                document.getElementById('meta-card').style.display = 'none';
+                Graph.nodeColor(Graph.nodeColor()).linkColor(Graph.linkColor()).linkWidth(Graph.linkWidth());
+            });
+    </script>
+</body>
+</html>
+
