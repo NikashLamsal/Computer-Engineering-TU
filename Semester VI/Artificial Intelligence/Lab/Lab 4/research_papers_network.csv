@@ -1,0 +1,31 @@
+Paper_ID,Title,Domain_Code,Methodology_Code,Primary_Author
+1,ResNet-3D: Residual Grids for Spatial Volumetric Analysis,CV,CNNs,Dr_Y_LeCun
+2,ViT-Scale: Scaling Vision Transformers for Dense Prediction,CV,Transformers,Dr_A_Vaswani
+3,SimCLR-V3: Contrastive Frameworks for Self-Supervised Vision,CV,CL,Dr_G_Hinton
+4,Masked Autoencoders Are Scalable Vision Visualizers,CV,Transformers,Dr_Y_LeCun
+5,NeRF-Graph: Neural Radiance Fields on Graph Topologies,CV,GNNs,Dr_J_Leskovec
+6,Real-Time Semantic Segmentation via Dilated Spatial Kernels,CV,CNNs,Dr_Y_LeCun
+7,Cross-Modal Vector Alignment in Generative Vision Spaces,CV,CL,Dr_G_Hinton
+8,Attention-Driven Object Detection in High-Resolution Imagery,CV,Transformers,Dr_A_Vaswani
+9,Unsupervised Visual Representation via Contrastive Residuals,CV,CL,Dr_G_Hinton
+10,Geometry-Aware Convolutions for 3D Point Cloud Processing,CV,CNNs,Dr_J_Leskovec
+11,BERT-Large: Pre-training of Deep Bidirectional Transformers,NLP,Transformers,Dr_A_Vaswani
+12,GPT-Next: Autoregressive Language Modeling at Scale,NLP,Transformers,Dr_A_Vaswani
+13,Contrastive Sentence Embeddings via Semantic Invariance,NLP,CL,Dr_Y_Bengio
+14,Long-Short Sequence Parsing via Linear Attention Windows,NLP,Transformers,Dr_A_Vaswani
+15,Text-Graph Recurrent Transformers for Structured Document Analysis,NLP,GNNs,Dr_J_Leskovec
+16,Exploring the Limits of Self-Supervised Machine Translation,NLP,CL,Dr_Y_Bengio
+17,Dependency-Parsing Convolutions for Low-Resource Languages,NLP,CNNs,Dr_Y_LeCun
+18,Token-Free Language Representations via Character-Level Processing,NLP,Transformers,Dr_Y_Bengio
+19,Retrieval-Augmented Transformers for Dynamic Knowledge Graphs,NLP,Transformers,Dr_J_Leskovec
+20,Evaluating Prompt Calibration Metrics in LLM Quantization,NLP,Transformers,Dr_Y_Bengio
+21,GCN-V2: Scalable Graph Convolutional Networks via Node Sampling,Graph_AI,GNNs,Dr_J_Leskovec
+22,Graph Attention Networks with Multi-Head Structural Alignment,Graph_AI,Transformers,Dr_A_Vaswani
+23,Self-Supervised Graph Contrastive Learning via Subgraph Masking,Graph_AI,CL,Dr_Y_Bengio
+24,Message-Passing Frameworks for Heterogeneous Molecular Topologies,Graph_AI,GNNs,Dr_G_Hinton
+25,Graph Convolutions Meet Vision Transformers: A Unified Review,Graph_AI,Transformers,Dr_Y_LeCun
+26,Temporal Graph Networks for Dynamic Relational Interaction Stream,Graph_AI,GNNs,Dr_J_Leskovec
+27,Inductive Representation Learning on Large-Scale Social Webs,Graph_AI,GNNs,Dr_J_Leskovec
+28,Contrastive Node Clustering via Graph Diffusion Wavelets,Graph_AI,CL,Dr_G_Hinton
+29,Deep Generative Models for Graph Structure Deconvolution,Graph_AI,CNNs,Dr_Y_LeCun
+30,Scalable Graph Neural Architecture Search via Gradient Descent,Graph_AI,GNNs,Dr_Y_Bengio
