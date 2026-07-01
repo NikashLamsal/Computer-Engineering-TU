@@ -1,0 +1,7 @@
+# .ipynb_checkpoints/
+
+# __pycache__/
+# *.pyc
+
+# project_filebrowser.db
+anaconda_projects/
